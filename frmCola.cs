@@ -38,9 +38,9 @@ namespace pryEstructuraDatos
             FilaDePersonas.Recorrer(dgvLista);
             FilaDePersonas.Recorrer(lstCola);
             FilaDePersonas.Recorrer();
-            txtCodigoNuevo = "";
-            txtNombreNuevo = "";
-            txtTramiteNuevo = "";
+            txtCodigoNuevo.Text = "";
+            txtNombreNuevo.Text = "";
+            txtTramiteNuevo.Text = "";
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -61,6 +61,11 @@ namespace pryEstructuraDatos
                 txtNombreEliminado.Text = "";
                 txtTramiteEliminado.Text = "";
             }
+        }
+
+        private void lstCola_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
