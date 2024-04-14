@@ -32,17 +32,14 @@ namespace pryEstructuraDatos
         private void arbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            frmCola Cola = new frmCola();
-            this.Hide();
-            Cola.Show();
         }
 
         private void colaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            frmEstucturaListaSimple ListaSimple = new frmEstucturaListaSimple();
+            frmCola Cola = new frmCola();
             this.Hide();
-            ListaSimple.Show();
+            Cola.Show();
         }
 
         private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,6 +47,25 @@ namespace pryEstructuraDatos
             frmEstructuraPila Pila = new frmEstructuraPila();
             this.Hide();
             Pila.Show();
+        }
+
+        private void listaDobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaDoble Doble = new frmListaDoble();
+            this.Hide();
+            Doble.Show();
+        }
+
+        private void listaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstucturaListaSimple Simple = new frmEstucturaListaSimple();
+            this.Hide();
+            Simple.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

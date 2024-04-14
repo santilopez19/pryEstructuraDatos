@@ -34,6 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(13, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(144, 144);
             this.pictureBox1.TabIndex = 1;
@@ -96,18 +97,29 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Fecha:";
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(13, 165);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 15;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // frmDatosDesarrollador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(539, 200);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDatosDesarrollador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos Desarrollador";
@@ -126,5 +138,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

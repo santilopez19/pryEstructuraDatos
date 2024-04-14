@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace pryEstructuraDatos
 {
-    public partial class frmDatosDesarrollador : Form
+    public partial class frmListaDoble : Form
     {
-        public frmDatosDesarrollador()
+        public frmListaDoble()
         {
             InitializeComponent();
-        }
-
-        private void frmDatosDesarrollador_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

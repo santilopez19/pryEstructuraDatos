@@ -21,5 +21,12 @@ namespace pryEstructuraDatos
         {
 
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmVentanaPrincipal principal = new frmVentanaPrincipal();
+            this.Hide();
+            principal.Show();
+        }
     }
 }
