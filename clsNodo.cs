@@ -17,6 +17,7 @@ namespace pryEstructuraDatos
         private clsNodo sig;
         private clsNodo ant;
 
+
         //Propiedades del Nodo
 
         public Int32 Codigo
@@ -43,6 +44,16 @@ namespace pryEstructuraDatos
         {
             get { return ant; }
             set { ant = value; }
+        }
+        public clsNodo Izquierdo
+        {
+            get { return ant; }
+            set { ant = value; }
+        }
+        public clsNodo Derecho
+        {
+            get { return sig; }
+            set { sig = value; }
         }
     }
 }
