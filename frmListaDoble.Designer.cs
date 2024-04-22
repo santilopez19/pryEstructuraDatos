@@ -47,8 +47,8 @@
             this.lblTramiteNuevo = new System.Windows.Forms.Label();
             this.lblCodigoNuevo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chkAscendente = new System.Windows.Forms.CheckBox();
             this.chkDescendente = new System.Windows.Forms.CheckBox();
+            this.chkAscendente = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
@@ -161,6 +161,7 @@
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // gbNuevoElemento
             // 
@@ -257,16 +258,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listar Datos";
             // 
-            // chkAscendente
-            // 
-            this.chkAscendente.AutoSize = true;
-            this.chkAscendente.Location = new System.Drawing.Point(27, 34);
-            this.chkAscendente.Name = "chkAscendente";
-            this.chkAscendente.Size = new System.Drawing.Size(101, 20);
-            this.chkAscendente.TabIndex = 7;
-            this.chkAscendente.Text = "Ascendente";
-            this.chkAscendente.UseVisualStyleBackColor = true;
-            // 
             // chkDescendente
             // 
             this.chkDescendente.AutoSize = true;
@@ -276,6 +267,16 @@
             this.chkDescendente.TabIndex = 8;
             this.chkDescendente.Text = "Descendente";
             this.chkDescendente.UseVisualStyleBackColor = true;
+            // 
+            // chkAscendente
+            // 
+            this.chkAscendente.AutoSize = true;
+            this.chkAscendente.Location = new System.Drawing.Point(27, 34);
+            this.chkAscendente.Name = "chkAscendente";
+            this.chkAscendente.Size = new System.Drawing.Size(101, 20);
+            this.chkAscendente.TabIndex = 7;
+            this.chkAscendente.Text = "Ascendente";
+            this.chkAscendente.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
