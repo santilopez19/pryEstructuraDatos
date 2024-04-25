@@ -87,5 +87,28 @@ namespace pryEstructuraDatos
                 InOrdenAsc(Lst, R.Derecho);
             }
         }
+        public void Recorrer(TreeView tree)
+        {
+            tree.Nodes.Clear();
+            TreeNode NodoPadre = new TreeNode("Árbol");
+            tree.Nodes.Add(NodoPadre);
+            PreOrden(Raiz, NodoPadre);
+            tree.ExpandAll();
+            //que esto se pase a un treeview
+        }
+
+        private void PreOrden(clsNodo R, TreeNode nodoTreeView)
+        {
+            TreeNode NodoPadre = new TreeNode(R.Codigo.ToString());
+            nodoTreeView.Nodes.Add(NodoPadre);
+            if (R.Izquierdo != null)
+            {
+            }
+            PreOrden(R.Izquierdo, NodoPadre);
+            if (R.Derecho != null)
+            {
+                PreOrden(R.Derecho, NodoPadre);
+            }
+        }
     }
 }

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.gbListado = new System.Windows.Forms.GroupBox();
-            this.lstCola = new System.Windows.Forms.ListBox();
-            this.dgvLista = new System.Windows.Forms.DataGridView();
+            this.lstListaDoble = new System.Windows.Forms.ListBox();
+            this.dgvListaDoble = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbElementoEliminado = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbListaDoble = new System.Windows.Forms.ComboBox();
             this.lblCodigoEliminado = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.gbNuevoElemento = new System.Windows.Forms.GroupBox();
@@ -53,7 +53,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.gbListado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
             this.gbElementoEliminado.SuspendLayout();
             this.gbNuevoElemento.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -62,8 +62,8 @@
             // 
             // gbListado
             // 
-            this.gbListado.Controls.Add(this.lstCola);
-            this.gbListado.Controls.Add(this.dgvLista);
+            this.gbListado.Controls.Add(this.lstListaDoble);
+            this.gbListado.Controls.Add(this.dgvListaDoble);
             this.gbListado.Location = new System.Drawing.Point(14, 262);
             this.gbListado.Margin = new System.Windows.Forms.Padding(4);
             this.gbListado.Name = "gbListado";
@@ -73,30 +73,30 @@
             this.gbListado.TabStop = false;
             this.gbListado.Text = "Listado en una Lista y una Grilla";
             // 
-            // lstCola
+            // lstListaDoble
             // 
-            this.lstCola.FormattingEnabled = true;
-            this.lstCola.ItemHeight = 16;
-            this.lstCola.Location = new System.Drawing.Point(8, 23);
-            this.lstCola.Margin = new System.Windows.Forms.Padding(4);
-            this.lstCola.Name = "lstCola";
-            this.lstCola.Size = new System.Drawing.Size(311, 164);
-            this.lstCola.TabIndex = 3;
+            this.lstListaDoble.FormattingEnabled = true;
+            this.lstListaDoble.ItemHeight = 16;
+            this.lstListaDoble.Location = new System.Drawing.Point(8, 23);
+            this.lstListaDoble.Margin = new System.Windows.Forms.Padding(4);
+            this.lstListaDoble.Name = "lstListaDoble";
+            this.lstListaDoble.Size = new System.Drawing.Size(311, 164);
+            this.lstListaDoble.TabIndex = 3;
             // 
-            // dgvLista
+            // dgvListaDoble
             // 
-            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvListaDoble.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaDoble.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Column1,
             this.Nombre});
-            this.dgvLista.Location = new System.Drawing.Point(328, 23);
-            this.dgvLista.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvLista.Name = "dgvLista";
-            this.dgvLista.RowHeadersVisible = false;
-            this.dgvLista.RowHeadersWidth = 51;
-            this.dgvLista.Size = new System.Drawing.Size(553, 162);
-            this.dgvLista.TabIndex = 1;
+            this.dgvListaDoble.Location = new System.Drawing.Point(328, 23);
+            this.dgvListaDoble.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvListaDoble.Name = "dgvListaDoble";
+            this.dgvListaDoble.RowHeadersVisible = false;
+            this.dgvListaDoble.RowHeadersWidth = 51;
+            this.dgvListaDoble.Size = new System.Drawing.Size(553, 162);
+            this.dgvListaDoble.TabIndex = 1;
             // 
             // Codigo
             // 
@@ -121,7 +121,7 @@
             // 
             // gbElementoEliminado
             // 
-            this.gbElementoEliminado.Controls.Add(this.comboBox1);
+            this.gbElementoEliminado.Controls.Add(this.cmbListaDoble);
             this.gbElementoEliminado.Controls.Add(this.lblCodigoEliminado);
             this.gbElementoEliminado.Controls.Add(this.btnEliminar);
             this.gbElementoEliminado.Location = new System.Drawing.Point(617, 13);
@@ -133,14 +133,14 @@
             this.gbElementoEliminado.TabStop = false;
             this.gbElementoEliminado.Text = "Elemento Eliminado";
             // 
-            // comboBox1
+            // cmbListaDoble
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(87, 34);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(176, 24);
-            this.comboBox1.TabIndex = 11;
+            this.cmbListaDoble.FormattingEnabled = true;
+            this.cmbListaDoble.Location = new System.Drawing.Point(87, 34);
+            this.cmbListaDoble.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbListaDoble.Name = "cmbListaDoble";
+            this.cmbListaDoble.Size = new System.Drawing.Size(176, 24);
+            this.cmbListaDoble.TabIndex = 11;
             // 
             // lblCodigoEliminado
             // 
@@ -214,6 +214,7 @@
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblNombreNuevo
             // 
@@ -324,7 +325,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura Lista Doble";
             this.gbListado.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).EndInit();
             this.gbElementoEliminado.ResumeLayout(false);
             this.gbElementoEliminado.PerformLayout();
             this.gbNuevoElemento.ResumeLayout(false);
@@ -339,13 +340,13 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbListado;
-        private System.Windows.Forms.ListBox lstCola;
-        private System.Windows.Forms.DataGridView dgvLista;
+        private System.Windows.Forms.ListBox lstListaDoble;
+        private System.Windows.Forms.DataGridView dgvListaDoble;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.GroupBox gbElementoEliminado;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbListaDoble;
         private System.Windows.Forms.Label lblCodigoEliminado;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.GroupBox gbNuevoElemento;

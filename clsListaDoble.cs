@@ -14,53 +14,51 @@ namespace pryEstructuraDatos
         private clsNodo ult;
 
         public clsNodo Primero
-        { 
+        {
             get { return pri; }
             set { pri = value; }
         }
+
         public clsNodo Ultimo
         {
             get { return ult; }
             set { ult = value; }
         }
+
         public void Agregar(clsNodo Nvo)
         {
-            if(Primero == null)
+            if (Primero == null)
             {
                 Primero = Nvo;
                 Ultimo = Nvo;
-
             }
             else
             {
-                if(Nvo.Codigo < Primero.Codigo)
+                if (Nvo.Codigo < Primero.Codigo)
                 {
                     Nvo.Siguiente = Primero;
                     Primero.Anterior = Nvo;
                     Primero = Nvo;
-
                 }
                 else
                 {
-                    if(Nvo.Codigo>Ultimo.Codigo)
+                    if (Nvo.Codigo > Ultimo.Codigo)
                     {
                         Ultimo.Siguiente = Nvo;
                         Nvo.Anterior = Ultimo;
                         Ultimo = Nvo;
                     }
-                    else 
+                    else
                     {
                         clsNodo Sig = Primero;
                         clsNodo Ant = Primero;
-
-                        while(Sig.Codigo<Nvo.Codigo)
+                        while (Sig.Codigo < Nvo.Codigo)
                         {
-                            Ant = Sig; 
+                            Ant = Sig;
                             Sig = Sig.Siguiente;
-                            
                         }
                         Ant.Siguiente = Nvo;
-                        Nvo.Siguiente= Sig;
+                        Nvo.Siguiente = Sig;
                         Sig.Anterior = Nvo;
                         Nvo.Anterior = Ant;
                     }
@@ -68,23 +66,47 @@ namespace pryEstructuraDatos
             }
         }
 
-        public void Eliminar()
+        public void Eliminar(Int32 Codigo)
         {
-            if (Primero != null)
+            if (Primero.Codigo == Codigo && Ultimo == Primero)
             {
-                Primero = Primero.Siguiente;
+                Primero = null;
+                Ultimo = null;
+            }
+            else
+            {
+                if (Primero.Codigo == Codigo)
+                {
+                    Primero = Primero.Siguiente;
+                    Primero.Anterior = null;
+                }
+                else
+                {
+                    if (Ultimo.Codigo == Codigo)
+                    {
+                        Ultimo = Ultimo.Anterior;
+                        Ultimo.Siguiente = null;
+                    }
+                    else
+                    {
+                        clsNodo aux = Primero;
+                        clsNodo ant = Primero;
+                        while (aux.Codigo < Codigo)
+                        {
+                            ant = aux;
+                            aux = aux.Siguiente;
+                        }
+                        ant.Siguiente = aux.Siguiente;
+                        aux = aux.Siguiente;
+                        aux.Anterior = ant;
+                    }
+                }
             }
         }
-        public void RecorrerDes(DataGridView Grilla)
-        {
-            clsNodo aux = Ultimo;
-            Grilla.Rows.Clear();
-            while(aux!=null)
-            {
-                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
-                aux = aux.Anterior;
-            }
-        }
+
+
+        ///ASCENDENTE
+
         public void Recorrer(DataGridView Grilla)
         {
             clsNodo aux = Primero;
@@ -118,7 +140,7 @@ namespace pryEstructuraDatos
         public void Recorrer()
         {
             clsNodo aux = Primero;
-            StreamWriter AD = new StreamWriter("Pila.csv", false, Encoding.UTF8);
+            StreamWriter AD = new StreamWriter("listaSimple.csv", false, Encoding.UTF8);
             AD.WriteLine("Lista de espera?/n");
             AD.WriteLine("Codigo;Nombre;Tramite");
             while (aux != null)
@@ -129,6 +151,58 @@ namespace pryEstructuraDatos
                 AD.Write(";");
                 AD.WriteLine(aux.Tramite);
                 aux = aux.Siguiente;
+            }
+            AD.Close();
+        }
+
+
+        ///DESCENDENTE
+
+        public void RecorrerDes(DataGridView Grilla)
+        {
+            clsNodo aux = Ultimo;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.Anterior;
+            }
+        }
+
+        public void RecorrerDes(ListBox lstCola)
+        {
+            clsNodo aux = Ultimo;
+            lstCola.Items.Clear();
+            while (aux != null)
+            {
+                lstCola.Items.Add(aux.Codigo);
+                aux = aux.Anterior;
+            }
+        }
+        public void RecorrerDes(ComboBox Combo)
+        {
+            clsNodo aux = Ultimo;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.Nombre);
+                aux = aux.Anterior;
+            }
+        }
+        public void RecorrerDes()
+        {
+            clsNodo aux = Ultimo;
+            StreamWriter AD = new StreamWriter("listaSimple.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera?/n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            while (aux != null)
+            {
+                AD.Write(aux.Codigo);
+                AD.Write(";");
+                AD.Write(aux.Nombre);
+                AD.Write(";");
+                AD.WriteLine(aux.Tramite);
+                aux = aux.Anterior;
             }
             AD.Close();
         }
