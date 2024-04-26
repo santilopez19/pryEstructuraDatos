@@ -67,5 +67,10 @@ namespace pryEstructuraDatos
         {
             this.Close();
         }
+
+        private void frmVentanaPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
