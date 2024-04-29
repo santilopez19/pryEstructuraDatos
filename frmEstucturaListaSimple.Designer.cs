@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstucturaListaSimple));
             this.gbListado = new System.Windows.Forms.GroupBox();
             this.lstLista = new System.Windows.Forms.ListBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
@@ -46,8 +47,8 @@
             this.lblNombreNuevo = new System.Windows.Forms.Label();
             this.lblTramiteNuevo = new System.Windows.Forms.Label();
             this.lblCodigoNuevo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.gbElementoEliminado.SuspendLayout();
@@ -242,6 +243,16 @@
             this.lblCodigoNuevo.TabIndex = 0;
             this.lblCodigoNuevo.Text = "Codigo:";
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(20, 466);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 15;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::pryEstructuraDatos.Properties.Resources.lista_simple;
@@ -253,16 +264,6 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // btnVolver
-            // 
-            this.btnVolver.Location = new System.Drawing.Point(20, 466);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(75, 23);
-            this.btnVolver.TabIndex = 15;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
             // frmEstucturaListaSimple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -273,6 +274,7 @@
             this.Controls.Add(this.gbElementoEliminado);
             this.Controls.Add(this.gbNuevoElemento);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmEstucturaListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

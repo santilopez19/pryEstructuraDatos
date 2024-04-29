@@ -28,5 +28,10 @@ namespace pryEstructuraDatos
             this.Hide();
             principal.Show();
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

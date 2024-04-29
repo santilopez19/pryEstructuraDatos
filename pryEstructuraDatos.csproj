@@ -155,5 +155,8 @@
   <ItemGroup>
     <None Include="Resources\pngtree-digital-systems-that-are-calculating-data-picture-image_1951273.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2024-04-23 at 11.34.33.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

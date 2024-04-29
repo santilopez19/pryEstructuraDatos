@@ -25,41 +25,38 @@ namespace pryEstructuraDatos
         private void datosDelDesarrolladorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDatosDesarrollador datoDesarrollador = new frmDatosDesarrollador();
-            this.Hide();
             datoDesarrollador.Show();
         }
 
         private void arbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+            frmArbolBinario Arbol = new frmArbolBinario();
+            Arbol.Show();
         }
 
         private void colaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
             frmCola Cola = new frmCola();
-            this.Hide();
             Cola.Show();
         }
 
         private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmEstructuraPila Pila = new frmEstructuraPila();
-            this.Hide();
             Pila.Show();
         }
 
         private void listaDobleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListaDoble Doble = new frmListaDoble();
-            this.Hide();
             Doble.Show();
         }
 
         private void listaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmEstucturaListaSimple Simple = new frmEstucturaListaSimple();
-            this.Hide();
             Simple.Show();
         }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstructuraPila));
             this.gbListado = new System.Windows.Forms.GroupBox();
             this.lstCola = new System.Windows.Forms.ListBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
@@ -64,9 +65,9 @@
             this.gbListado.Controls.Add(this.lstCola);
             this.gbListado.Controls.Add(this.dgvLista);
             this.gbListado.Location = new System.Drawing.Point(13, 277);
-            this.gbListado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbListado.Margin = new System.Windows.Forms.Padding(4);
             this.gbListado.Name = "gbListado";
-            this.gbListado.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbListado.Padding = new System.Windows.Forms.Padding(4);
             this.gbListado.Size = new System.Drawing.Size(889, 193);
             this.gbListado.TabIndex = 5;
             this.gbListado.TabStop = false;
@@ -77,7 +78,7 @@
             this.lstCola.FormattingEnabled = true;
             this.lstCola.ItemHeight = 16;
             this.lstCola.Location = new System.Drawing.Point(8, 23);
-            this.lstCola.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstCola.Margin = new System.Windows.Forms.Padding(4);
             this.lstCola.Name = "lstCola";
             this.lstCola.Size = new System.Drawing.Size(311, 164);
             this.lstCola.TabIndex = 3;
@@ -91,7 +92,7 @@
             this.Column1,
             this.Nombre});
             this.dgvLista.Location = new System.Drawing.Point(328, 23);
-            this.dgvLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvLista.Margin = new System.Windows.Forms.Padding(4);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.RowHeadersVisible = false;
             this.dgvLista.RowHeadersWidth = 51;
@@ -129,9 +130,9 @@
             this.gbElementoEliminado.Controls.Add(this.lblNombre);
             this.gbElementoEliminado.Controls.Add(this.btnEliminar);
             this.gbElementoEliminado.Location = new System.Drawing.Point(617, 27);
-            this.gbElementoEliminado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbElementoEliminado.Margin = new System.Windows.Forms.Padding(4);
             this.gbElementoEliminado.Name = "gbElementoEliminado";
-            this.gbElementoEliminado.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbElementoEliminado.Padding = new System.Windows.Forms.Padding(4);
             this.gbElementoEliminado.Size = new System.Drawing.Size(285, 242);
             this.gbElementoEliminado.TabIndex = 6;
             this.gbElementoEliminado.TabStop = false;
@@ -140,7 +141,7 @@
             // txtNombreEliminado
             // 
             this.txtNombreEliminado.Location = new System.Drawing.Point(89, 66);
-            this.txtNombreEliminado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreEliminado.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreEliminado.Name = "txtNombreEliminado";
             this.txtNombreEliminado.Size = new System.Drawing.Size(165, 22);
             this.txtNombreEliminado.TabIndex = 13;
@@ -158,7 +159,7 @@
             // txtTramiteEliminado
             // 
             this.txtTramiteEliminado.Location = new System.Drawing.Point(89, 100);
-            this.txtTramiteEliminado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTramiteEliminado.Margin = new System.Windows.Forms.Padding(4);
             this.txtTramiteEliminado.Name = "txtTramiteEliminado";
             this.txtTramiteEliminado.Size = new System.Drawing.Size(165, 22);
             this.txtTramiteEliminado.TabIndex = 12;
@@ -176,7 +177,7 @@
             // txtCodigoEliminado
             // 
             this.txtCodigoEliminado.Location = new System.Drawing.Point(89, 36);
-            this.txtCodigoEliminado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigoEliminado.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigoEliminado.Name = "txtCodigoEliminado";
             this.txtCodigoEliminado.Size = new System.Drawing.Size(165, 22);
             this.txtCodigoEliminado.TabIndex = 11;
@@ -194,7 +195,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(28, 164);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(235, 46);
             this.btnEliminar.TabIndex = 10;
@@ -212,9 +213,9 @@
             this.gbNuevoElemento.Controls.Add(this.lblTramiteNuevo);
             this.gbNuevoElemento.Controls.Add(this.lblCodigoNuevo);
             this.gbNuevoElemento.Location = new System.Drawing.Point(308, 27);
-            this.gbNuevoElemento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbNuevoElemento.Margin = new System.Windows.Forms.Padding(4);
             this.gbNuevoElemento.Name = "gbNuevoElemento";
-            this.gbNuevoElemento.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbNuevoElemento.Padding = new System.Windows.Forms.Padding(4);
             this.gbNuevoElemento.Size = new System.Drawing.Size(289, 242);
             this.gbNuevoElemento.TabIndex = 4;
             this.gbNuevoElemento.TabStop = false;
@@ -223,7 +224,7 @@
             // txtNombreNuevo
             // 
             this.txtNombreNuevo.Location = new System.Drawing.Point(93, 68);
-            this.txtNombreNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreNuevo.Name = "txtNombreNuevo";
             this.txtNombreNuevo.Size = new System.Drawing.Size(165, 22);
             this.txtNombreNuevo.TabIndex = 6;
@@ -231,7 +232,7 @@
             // txtTramiteNuevo
             // 
             this.txtTramiteNuevo.Location = new System.Drawing.Point(93, 100);
-            this.txtTramiteNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTramiteNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTramiteNuevo.Name = "txtTramiteNuevo";
             this.txtTramiteNuevo.Size = new System.Drawing.Size(165, 22);
             this.txtTramiteNuevo.TabIndex = 5;
@@ -239,7 +240,7 @@
             // txtCodigoNuevo
             // 
             this.txtCodigoNuevo.Location = new System.Drawing.Point(93, 36);
-            this.txtCodigoNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigoNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigoNuevo.Name = "txtCodigoNuevo";
             this.txtCodigoNuevo.Size = new System.Drawing.Size(165, 22);
             this.txtCodigoNuevo.TabIndex = 4;
@@ -247,7 +248,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(35, 160);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(235, 49);
             this.btnAgregar.TabIndex = 3;
@@ -289,7 +290,7 @@
             // 
             this.pictureBox1.Image = global::pryEstructuraDatos.Properties.Resources.estuctura_pila;
             this.pictureBox1.Location = new System.Drawing.Point(13, 27);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(287, 242);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -316,6 +317,7 @@
             this.Controls.Add(this.gbElementoEliminado);
             this.Controls.Add(this.gbNuevoElemento);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmEstructuraPila";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
