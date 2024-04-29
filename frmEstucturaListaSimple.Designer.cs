@@ -136,6 +136,7 @@
             this.cmbLista.Name = "cmbLista";
             this.cmbLista.Size = new System.Drawing.Size(176, 24);
             this.cmbLista.TabIndex = 11;
+            this.cmbLista.SelectedIndexChanged += new System.EventHandler(this.cmbLista_SelectedIndexChanged);
             // 
             // lblCodigoEliminado
             // 
@@ -276,6 +277,7 @@
             this.Name = "frmEstucturaListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura Lista Simple";
+            this.Load += new System.EventHandler(this.frmEstucturaListaSimple_Load);
             this.gbListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.gbElementoEliminado.ResumeLayout(false);

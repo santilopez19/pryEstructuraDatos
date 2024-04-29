@@ -27,12 +27,13 @@ namespace pryEstructuraDatos
             Lista.Agregar(ObjNodo);
             Lista.Recorrer(dgvLista);
             Lista.Recorrer(lstLista);
+            Lista.Recorrer(cmbLista);
             Lista.Recorrer();
 
 
-            lblCodigoNuevo.Text = "";
-            lblNombreNuevo.Text = "";
-            lblTramiteNuevo.Text = "";
+            txtCodigoNuevo.Text = "";
+            txtNombreNuevo.Text = "";
+            txtTramiteNuevo.Text = "";
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -44,6 +45,7 @@ namespace pryEstructuraDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            btnEliminar.Enabled = false;
             if (Lista.Primero != null)
             {
                 Int32 x = Convert.ToInt32(cmbLista.Text);
@@ -58,6 +60,15 @@ namespace pryEstructuraDatos
                 MessageBox.Show("La lista esta vacia.");
 
             }
+        }
+
+        private void cmbLista_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnEliminar.Enabled = true;
+        }
+
+        private void frmEstucturaListaSimple_Load(object sender, EventArgs e)
+        {
             btnEliminar.Enabled = false;
         }
     }

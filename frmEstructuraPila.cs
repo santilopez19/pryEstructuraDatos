@@ -39,9 +39,9 @@ namespace pryEstructuraDatos
 
             if (Pila.Primero != null)
             {
-                lblCodigoEliminado.Text = Pila.Primero.Codigo.ToString();
-                lblNombre.Text = Pila.Primero.Nombre;
-                lblTraminteEliminado.Text = Pila.Primero.Tramite;
+                txtCodigoEliminado.Text = Pila.Primero.Codigo.ToString();
+                txtNombreEliminado.Text = Pila.Primero.Nombre;
+                txtTramiteEliminado.Text = Pila.Primero.Tramite;
                 Pila.Eliminar();
                 Pila.Recorrer(dgvLista);
                 Pila.Recorrer(lstCola);

@@ -47,11 +47,10 @@
             this.lblTramiteNuevo = new System.Windows.Forms.Label();
             this.lblCodigoNuevo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chkDescendente = new System.Windows.Forms.CheckBox();
-            this.chkAscendente = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.optDescendente = new System.Windows.Forms.RadioButton();
+            this.optAscendente = new System.Windows.Forms.RadioButton();
             this.gbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
             this.gbElementoEliminado.SuspendLayout();
@@ -141,6 +140,7 @@
             this.cmbListaDoble.Name = "cmbListaDoble";
             this.cmbListaDoble.Size = new System.Drawing.Size(176, 24);
             this.cmbListaDoble.TabIndex = 11;
+            this.cmbListaDoble.SelectedIndexChanged += new System.EventHandler(this.cmbListaDoble_SelectedIndexChanged);
             // 
             // lblCodigoEliminado
             // 
@@ -248,8 +248,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.chkDescendente);
-            this.groupBox1.Controls.Add(this.chkAscendente);
+            this.groupBox1.Controls.Add(this.optDescendente);
+            this.groupBox1.Controls.Add(this.optAscendente);
             this.groupBox1.Location = new System.Drawing.Point(618, 154);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -258,26 +258,6 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listar Datos";
-            // 
-            // chkDescendente
-            // 
-            this.chkDescendente.AutoSize = true;
-            this.chkDescendente.Location = new System.Drawing.Point(27, 60);
-            this.chkDescendente.Name = "chkDescendente";
-            this.chkDescendente.Size = new System.Drawing.Size(110, 20);
-            this.chkDescendente.TabIndex = 8;
-            this.chkDescendente.Text = "Descendente";
-            this.chkDescendente.UseVisualStyleBackColor = true;
-            // 
-            // chkAscendente
-            // 
-            this.chkAscendente.AutoSize = true;
-            this.chkAscendente.Location = new System.Drawing.Point(27, 34);
-            this.chkAscendente.Name = "chkAscendente";
-            this.chkAscendente.Size = new System.Drawing.Size(101, 20);
-            this.chkAscendente.TabIndex = 7;
-            this.chkAscendente.Text = "Ascendente";
-            this.chkAscendente.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -290,15 +270,6 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // btnVolver
             // 
             this.btnVolver.Location = new System.Drawing.Point(14, 462);
@@ -309,13 +280,38 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // optDescendente
+            // 
+            this.optDescendente.AutoSize = true;
+            this.optDescendente.Location = new System.Drawing.Point(27, 58);
+            this.optDescendente.Margin = new System.Windows.Forms.Padding(4);
+            this.optDescendente.Name = "optDescendente";
+            this.optDescendente.Size = new System.Drawing.Size(109, 20);
+            this.optDescendente.TabIndex = 10;
+            this.optDescendente.TabStop = true;
+            this.optDescendente.Text = "Descendente";
+            this.optDescendente.UseVisualStyleBackColor = true;
+            this.optDescendente.CheckedChanged += new System.EventHandler(this.optDescendente_CheckedChanged);
+            // 
+            // optAscendente
+            // 
+            this.optAscendente.AutoSize = true;
+            this.optAscendente.Location = new System.Drawing.Point(27, 26);
+            this.optAscendente.Margin = new System.Windows.Forms.Padding(4);
+            this.optAscendente.Name = "optAscendente";
+            this.optAscendente.Size = new System.Drawing.Size(100, 20);
+            this.optAscendente.TabIndex = 9;
+            this.optAscendente.TabStop = true;
+            this.optAscendente.Text = "Ascendente";
+            this.optAscendente.UseVisualStyleBackColor = true;
+            this.optAscendente.CheckedChanged += new System.EventHandler(this.optAscendente_CheckedChanged);
+            // 
             // frmListaDoble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 494);
             this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbListado);
             this.Controls.Add(this.gbElementoEliminado);
@@ -324,6 +320,7 @@
             this.Name = "frmListaDoble";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura Lista Doble";
+            this.Load += new System.EventHandler(this.frmListaDoble_Load);
             this.gbListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).EndInit();
             this.gbElementoEliminado.ResumeLayout(false);
@@ -359,9 +356,8 @@
         private System.Windows.Forms.Label lblCodigoNuevo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox chkDescendente;
-        private System.Windows.Forms.CheckBox chkAscendente;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.RadioButton optDescendente;
+        private System.Windows.Forms.RadioButton optAscendente;
     }
 }

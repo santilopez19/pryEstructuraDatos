@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,41 +27,21 @@ namespace pryEstructuraDatos
         clsListaDoble filaListaDoble = new clsListaDoble();
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (chkAscendente.Checked)
+            btnEliminar.Enabled = false;
+            if (filaListaDoble.Primero != null)
             {
-                if (filaListaDoble.Primero != null)
-                {
-                    Int32 x = Convert.ToInt32(cmbListaDoble.Text);
-                    filaListaDoble.Eliminar(x);
-                    filaListaDoble.Recorrer(dgvListaDoble);
-                    filaListaDoble.Recorrer(lstListaDoble);
-                    filaListaDoble.Recorrer(cmbListaDoble);
-                    filaListaDoble.Recorrer();
-                    cmbListaDoble.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show("La lista esta vacia");
-                    btnEliminar.Enabled = false;
-                }
+                Int32 x = Convert.ToInt32(cmbListaDoble.Text);
+                filaListaDoble.Eliminar(x);
+                filaListaDoble.Recorrer(dgvListaDoble);
+                filaListaDoble.Recorrer(lstListaDoble);
+                filaListaDoble.Recorrer(cmbListaDoble);
+                filaListaDoble.Recorrer();
+                cmbListaDoble.Text = "";
             }
             else
             {
-                if (filaListaDoble.Ultimo != null)
-                {
-                    Int32 x = Convert.ToInt32(cmbListaDoble.Text);
-                    filaListaDoble.Eliminar(x);
-                    filaListaDoble.RecorrerDes(dgvListaDoble);
-                    filaListaDoble.RecorrerDes(lstListaDoble);
-                    filaListaDoble.RecorrerDes(cmbListaDoble);
-                    filaListaDoble.RecorrerDes();
-                    cmbListaDoble.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show("La lista esta vacia");
-                    btnEliminar.Enabled = false;
-                }
+
+                MessageBox.Show("La lista esta vacia");
             }
         }
 
@@ -78,6 +59,35 @@ namespace pryEstructuraDatos
             txtCodigoNuevo.Text = "";
             txtNombreNuevo.Text = "";
             txtTramiteNuevo.Text = "";
+        }
+
+
+        private void optAscendente_CheckedChanged(object sender, EventArgs e)
+        {
+            filaListaDoble.Recorrer(dgvListaDoble);
+            filaListaDoble.Recorrer(cmbListaDoble);
+            filaListaDoble.Recorrer(lstListaDoble);
+
+            filaListaDoble.Recorrer();
+        }
+
+        private void optDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+            filaListaDoble.RecorrerDes(dgvListaDoble);
+            filaListaDoble.RecorrerDes(cmbListaDoble);
+            filaListaDoble.RecorrerDes(lstListaDoble);
+
+            filaListaDoble.Recorrer();
+        }
+
+        private void cmbListaDoble_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnEliminar.Enabled = true;
+        }
+
+        private void frmListaDoble_Load(object sender, EventArgs e)
+        {
+            btnEliminar.Enabled = false;
         }
     }
 }
