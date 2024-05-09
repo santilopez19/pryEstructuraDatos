@@ -31,16 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArbolBinario));
             this.btnVolver = new System.Windows.Forms.Button();
             this.gbListado = new System.Windows.Forms.GroupBox();
-            this.chkDescendente = new System.Windows.Forms.CheckBox();
-            this.chkPre = new System.Windows.Forms.CheckBox();
-            this.chkPost = new System.Windows.Forms.CheckBox();
-            this.chkAscendente = new System.Windows.Forms.CheckBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbElementoEliminado = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCodigo = new System.Windows.Forms.ComboBox();
             this.lblCodigoEliminado = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.gbNuevoElemento = new System.Windows.Forms.GroupBox();
@@ -53,6 +49,11 @@
             this.lblCodigoNuevo = new System.Windows.Forms.Label();
             this.btnEquilibrar = new System.Windows.Forms.Button();
             this.trvArbol = new System.Windows.Forms.TreeView();
+            this.lstArbolBinario = new System.Windows.Forms.ListBox();
+            this.optPostOrden = new System.Windows.Forms.RadioButton();
+            this.optPreOrden = new System.Windows.Forms.RadioButton();
+            this.optInOrdenDesc = new System.Windows.Forms.RadioButton();
+            this.optInOrdenAsc = new System.Windows.Forms.RadioButton();
             this.gbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.gbElementoEliminado.SuspendLayout();
@@ -71,10 +72,10 @@
             // 
             // gbListado
             // 
-            this.gbListado.Controls.Add(this.chkDescendente);
-            this.gbListado.Controls.Add(this.chkPre);
-            this.gbListado.Controls.Add(this.chkPost);
-            this.gbListado.Controls.Add(this.chkAscendente);
+            this.gbListado.Controls.Add(this.optPostOrden);
+            this.gbListado.Controls.Add(this.optPreOrden);
+            this.gbListado.Controls.Add(this.optInOrdenDesc);
+            this.gbListado.Controls.Add(this.optInOrdenAsc);
             this.gbListado.Controls.Add(this.dgvLista);
             this.gbListado.Location = new System.Drawing.Point(19, 263);
             this.gbListado.Margin = new System.Windows.Forms.Padding(4);
@@ -84,46 +85,6 @@
             this.gbListado.TabIndex = 17;
             this.gbListado.TabStop = false;
             this.gbListado.Text = "Listado en una Lista y una Grilla";
-            // 
-            // chkDescendente
-            // 
-            this.chkDescendente.AutoSize = true;
-            this.chkDescendente.Location = new System.Drawing.Point(24, 58);
-            this.chkDescendente.Name = "chkDescendente";
-            this.chkDescendente.Size = new System.Drawing.Size(164, 20);
-            this.chkDescendente.TabIndex = 5;
-            this.chkDescendente.Text = "In-Orden Descendente";
-            this.chkDescendente.UseVisualStyleBackColor = true;
-            // 
-            // chkPre
-            // 
-            this.chkPre.AutoSize = true;
-            this.chkPre.Location = new System.Drawing.Point(24, 86);
-            this.chkPre.Name = "chkPre";
-            this.chkPre.Size = new System.Drawing.Size(91, 20);
-            this.chkPre.TabIndex = 4;
-            this.chkPre.Text = "Pre-Orden";
-            this.chkPre.UseVisualStyleBackColor = true;
-            // 
-            // chkPost
-            // 
-            this.chkPost.AutoSize = true;
-            this.chkPost.Location = new System.Drawing.Point(24, 112);
-            this.chkPost.Name = "chkPost";
-            this.chkPost.Size = new System.Drawing.Size(97, 20);
-            this.chkPost.TabIndex = 3;
-            this.chkPost.Text = "Post-Orden";
-            this.chkPost.UseVisualStyleBackColor = true;
-            // 
-            // chkAscendente
-            // 
-            this.chkAscendente.AutoSize = true;
-            this.chkAscendente.Location = new System.Drawing.Point(24, 32);
-            this.chkAscendente.Name = "chkAscendente";
-            this.chkAscendente.Size = new System.Drawing.Size(155, 20);
-            this.chkAscendente.TabIndex = 2;
-            this.chkAscendente.Text = "In-Orden Ascendente";
-            this.chkAscendente.UseVisualStyleBackColor = true;
             // 
             // dgvLista
             // 
@@ -163,7 +124,7 @@
             // 
             // gbElementoEliminado
             // 
-            this.gbElementoEliminado.Controls.Add(this.comboBox1);
+            this.gbElementoEliminado.Controls.Add(this.cmbCodigo);
             this.gbElementoEliminado.Controls.Add(this.lblCodigoEliminado);
             this.gbElementoEliminado.Controls.Add(this.btnEliminar);
             this.gbElementoEliminado.Location = new System.Drawing.Point(623, 15);
@@ -175,14 +136,15 @@
             this.gbElementoEliminado.TabStop = false;
             this.gbElementoEliminado.Text = "Elemento Eliminado";
             // 
-            // comboBox1
+            // cmbCodigo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(87, 34);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(176, 24);
-            this.comboBox1.TabIndex = 11;
+            this.cmbCodigo.FormattingEnabled = true;
+            this.cmbCodigo.Location = new System.Drawing.Point(87, 34);
+            this.cmbCodigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbCodigo.Name = "cmbCodigo";
+            this.cmbCodigo.Size = new System.Drawing.Size(176, 24);
+            this.cmbCodigo.TabIndex = 11;
+            this.cmbCodigo.SelectedIndexChanged += new System.EventHandler(this.cmbCodigo_SelectedIndexChanged);
             // 
             // lblCodigoEliminado
             // 
@@ -203,6 +165,7 @@
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // gbNuevoElemento
             // 
@@ -229,6 +192,7 @@
             this.txtNombreNuevo.Name = "txtNombreNuevo";
             this.txtNombreNuevo.Size = new System.Drawing.Size(165, 22);
             this.txtNombreNuevo.TabIndex = 6;
+            this.txtNombreNuevo.TextChanged += new System.EventHandler(this.txtNombreNuevo_TextChanged);
             // 
             // txtTramiteNuevo
             // 
@@ -237,6 +201,7 @@
             this.txtTramiteNuevo.Name = "txtTramiteNuevo";
             this.txtTramiteNuevo.Size = new System.Drawing.Size(165, 22);
             this.txtTramiteNuevo.TabIndex = 5;
+            this.txtTramiteNuevo.TextChanged += new System.EventHandler(this.txtTramiteNuevo_TextChanged);
             // 
             // txtCodigoNuevo
             // 
@@ -245,6 +210,7 @@
             this.txtCodigoNuevo.Name = "txtCodigoNuevo";
             this.txtCodigoNuevo.Size = new System.Drawing.Size(165, 22);
             this.txtCodigoNuevo.TabIndex = 4;
+            this.txtCodigoNuevo.TextChanged += new System.EventHandler(this.txtCodigoNuevo_TextChanged);
             // 
             // btnAgregar
             // 
@@ -255,6 +221,7 @@
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblNombreNuevo
             // 
@@ -295,6 +262,7 @@
             this.btnEquilibrar.TabIndex = 12;
             this.btnEquilibrar.Text = "Equilibrar";
             this.btnEquilibrar.UseVisualStyleBackColor = true;
+            this.btnEquilibrar.Click += new System.EventHandler(this.btnEquilibrar_Click);
             // 
             // trvArbol
             // 
@@ -303,11 +271,74 @@
             this.trvArbol.Size = new System.Drawing.Size(289, 241);
             this.trvArbol.TabIndex = 21;
             // 
+            // lstArbolBinario
+            // 
+            this.lstArbolBinario.FormattingEnabled = true;
+            this.lstArbolBinario.ItemHeight = 16;
+            this.lstArbolBinario.Location = new System.Drawing.Point(916, 20);
+            this.lstArbolBinario.Margin = new System.Windows.Forms.Padding(4);
+            this.lstArbolBinario.Name = "lstArbolBinario";
+            this.lstArbolBinario.Size = new System.Drawing.Size(193, 436);
+            this.lstArbolBinario.TabIndex = 22;
+            // 
+            // optPostOrden
+            // 
+            this.optPostOrden.AutoSize = true;
+            this.optPostOrden.Location = new System.Drawing.Point(8, 157);
+            this.optPostOrden.Margin = new System.Windows.Forms.Padding(4);
+            this.optPostOrden.Name = "optPostOrden";
+            this.optPostOrden.Size = new System.Drawing.Size(96, 20);
+            this.optPostOrden.TabIndex = 9;
+            this.optPostOrden.TabStop = true;
+            this.optPostOrden.Text = "Post-Orden";
+            this.optPostOrden.UseVisualStyleBackColor = true;
+            this.optPostOrden.CheckedChanged += new System.EventHandler(this.optPostOrden_CheckedChanged);
+            // 
+            // optPreOrden
+            // 
+            this.optPreOrden.AutoSize = true;
+            this.optPreOrden.Location = new System.Drawing.Point(8, 116);
+            this.optPreOrden.Margin = new System.Windows.Forms.Padding(4);
+            this.optPreOrden.Name = "optPreOrden";
+            this.optPreOrden.Size = new System.Drawing.Size(90, 20);
+            this.optPreOrden.TabIndex = 8;
+            this.optPreOrden.TabStop = true;
+            this.optPreOrden.Text = "Pre-Orden";
+            this.optPreOrden.UseVisualStyleBackColor = true;
+            this.optPreOrden.CheckedChanged += new System.EventHandler(this.optPreOrden_CheckedChanged);
+            // 
+            // optInOrdenDesc
+            // 
+            this.optInOrdenDesc.AutoSize = true;
+            this.optInOrdenDesc.Location = new System.Drawing.Point(8, 75);
+            this.optInOrdenDesc.Margin = new System.Windows.Forms.Padding(4);
+            this.optInOrdenDesc.Name = "optInOrdenDesc";
+            this.optInOrdenDesc.Size = new System.Drawing.Size(163, 20);
+            this.optInOrdenDesc.TabIndex = 7;
+            this.optInOrdenDesc.TabStop = true;
+            this.optInOrdenDesc.Text = "In-Orden Descendente";
+            this.optInOrdenDesc.UseVisualStyleBackColor = true;
+            this.optInOrdenDesc.CheckedChanged += new System.EventHandler(this.optInOrdenDesc_CheckedChanged);
+            // 
+            // optInOrdenAsc
+            // 
+            this.optInOrdenAsc.AutoSize = true;
+            this.optInOrdenAsc.Location = new System.Drawing.Point(8, 35);
+            this.optInOrdenAsc.Margin = new System.Windows.Forms.Padding(4);
+            this.optInOrdenAsc.Name = "optInOrdenAsc";
+            this.optInOrdenAsc.Size = new System.Drawing.Size(154, 20);
+            this.optInOrdenAsc.TabIndex = 6;
+            this.optInOrdenAsc.TabStop = true;
+            this.optInOrdenAsc.Text = "In-Orden Ascendente";
+            this.optInOrdenAsc.UseVisualStyleBackColor = true;
+            this.optInOrdenAsc.CheckedChanged += new System.EventHandler(this.optInOrdenAsc_CheckedChanged);
+            // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 492);
+            this.ClientSize = new System.Drawing.Size(1121, 492);
+            this.Controls.Add(this.lstArbolBinario);
             this.Controls.Add(this.trvArbol);
             this.Controls.Add(this.btnEquilibrar);
             this.Controls.Add(this.btnVolver);
@@ -339,7 +370,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.GroupBox gbElementoEliminado;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCodigo;
         private System.Windows.Forms.Label lblCodigoEliminado;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.GroupBox gbNuevoElemento;
@@ -351,10 +382,11 @@
         private System.Windows.Forms.Label lblTramiteNuevo;
         private System.Windows.Forms.Label lblCodigoNuevo;
         private System.Windows.Forms.Button btnEquilibrar;
-        private System.Windows.Forms.CheckBox chkDescendente;
-        private System.Windows.Forms.CheckBox chkPre;
-        private System.Windows.Forms.CheckBox chkPost;
-        private System.Windows.Forms.CheckBox chkAscendente;
         private System.Windows.Forms.TreeView trvArbol;
+        private System.Windows.Forms.ListBox lstArbolBinario;
+        private System.Windows.Forms.RadioButton optPostOrden;
+        private System.Windows.Forms.RadioButton optPreOrden;
+        private System.Windows.Forms.RadioButton optInOrdenDesc;
+        private System.Windows.Forms.RadioButton optInOrdenAsc;
     }
 }
