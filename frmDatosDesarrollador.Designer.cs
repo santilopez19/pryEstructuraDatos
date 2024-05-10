@@ -101,6 +101,7 @@
             // 
             // btnVolver
             // 
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnVolver.Location = new System.Drawing.Point(13, 165);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 23);
@@ -195,6 +196,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDatosDesarrollador";

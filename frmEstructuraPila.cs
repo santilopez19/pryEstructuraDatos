@@ -64,7 +64,6 @@ namespace pryEstructuraDatos
         {
             frmVentanaPrincipal principal = new frmVentanaPrincipal();
             this.Hide();
-            principal.Show();
         }
     }
 }

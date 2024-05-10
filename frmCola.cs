@@ -47,9 +47,9 @@ namespace pryEstructuraDatos
         {
             if (FilaDePersonas.Primero != null)
             {
-                lblCodigoEliminado.Text = FilaDePersonas.Primero.Codigo.ToString();
-                lblNombre.Text = FilaDePersonas.Primero.Nombre;
-                lblTraminteEliminado.Text = FilaDePersonas.Primero.Tramite;
+                txtCodigoEliminado.Text = FilaDePersonas.Primero.Codigo.ToString();
+                txtNombreEliminado.Text = FilaDePersonas.Primero.Nombre;
+                txtTramiteEliminado.Text = FilaDePersonas.Primero.Tramite;
                 FilaDePersonas.Eliminar();
                 FilaDePersonas.Recorrer(dgvLista);
                 FilaDePersonas.Recorrer(lstCola);
@@ -72,7 +72,6 @@ namespace pryEstructuraDatos
         {
             frmVentanaPrincipal principal = new frmVentanaPrincipal();
             this.Hide();
-            principal.Show();
         }
     }
 }

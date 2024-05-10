@@ -40,7 +40,6 @@ namespace pryEstructuraDatos
         {
             frmVentanaPrincipal principal = new frmVentanaPrincipal();
             this.Hide();
-            principal.Show();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

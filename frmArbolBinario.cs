@@ -138,5 +138,12 @@ namespace pryEstructuraDatos
                 btnAgregar.Enabled = false;
             }
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+
+            frmVentanaPrincipal principal = new frmVentanaPrincipal();
+            this.Hide();
+        }
     }
 }

@@ -22,7 +22,6 @@ namespace pryEstructuraDatos
         {
             frmVentanaPrincipal principal = new frmVentanaPrincipal();
             this.Hide();
-            principal.Show();
         }
         clsListaDoble filaListaDoble = new clsListaDoble();
         private void btnEliminar_Click(object sender, EventArgs e)
