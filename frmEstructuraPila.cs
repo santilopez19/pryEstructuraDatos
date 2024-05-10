@@ -27,7 +27,7 @@ namespace pryEstructuraDatos
             ObjNodo.Tramite = txtTramiteNuevo.Text;
             Pila.Agregar(ObjNodo);
             Pila.Recorrer(dgvLista);
-            Pila.Recorrer(lstCola);
+            Pila.Recorrer(lstPila);
             Pila.Recorrer();
             txtCodigoNuevo.Text = "";
             txtNombreNuevo.Text = "";
@@ -44,7 +44,7 @@ namespace pryEstructuraDatos
                 txtTramiteEliminado.Text = Pila.Primero.Tramite;
                 Pila.Eliminar();
                 Pila.Recorrer(dgvLista);
-                Pila.Recorrer(lstCola);
+                Pila.Recorrer(lstPila);
                 Pila.Recorrer();
             }
             else

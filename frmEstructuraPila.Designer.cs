@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstructuraPila));
             this.gbListado = new System.Windows.Forms.GroupBox();
-            this.lstCola = new System.Windows.Forms.ListBox();
+            this.lstPila = new System.Windows.Forms.ListBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +62,7 @@
             // 
             // gbListado
             // 
-            this.gbListado.Controls.Add(this.lstCola);
+            this.gbListado.Controls.Add(this.lstPila);
             this.gbListado.Controls.Add(this.dgvLista);
             this.gbListado.Location = new System.Drawing.Point(13, 277);
             this.gbListado.Margin = new System.Windows.Forms.Padding(4);
@@ -73,16 +73,16 @@
             this.gbListado.TabStop = false;
             this.gbListado.Text = "Listado en una Lista y una Grilla";
             // 
-            // lstCola
+            // lstPila
             // 
-            this.lstCola.FormattingEnabled = true;
-            this.lstCola.ItemHeight = 16;
-            this.lstCola.Location = new System.Drawing.Point(8, 23);
-            this.lstCola.Margin = new System.Windows.Forms.Padding(4);
-            this.lstCola.Name = "lstCola";
-            this.lstCola.Size = new System.Drawing.Size(311, 164);
-            this.lstCola.TabIndex = 3;
-            this.lstCola.SelectedIndexChanged += new System.EventHandler(this.lstCola_SelectedIndexChanged);
+            this.lstPila.FormattingEnabled = true;
+            this.lstPila.ItemHeight = 16;
+            this.lstPila.Location = new System.Drawing.Point(8, 23);
+            this.lstPila.Margin = new System.Windows.Forms.Padding(4);
+            this.lstPila.Name = "lstPila";
+            this.lstPila.Size = new System.Drawing.Size(311, 164);
+            this.lstPila.TabIndex = 3;
+            this.lstPila.SelectedIndexChanged += new System.EventHandler(this.lstCola_SelectedIndexChanged);
             // 
             // dgvLista
             // 
@@ -357,7 +357,7 @@
         private System.Windows.Forms.Label lblTramiteNuevo;
         private System.Windows.Forms.Label lblCodigoNuevo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListBox lstCola;
+        private System.Windows.Forms.ListBox lstPila;
         private System.Windows.Forms.Button btnVolver;
     }
 }
